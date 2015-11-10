@@ -15,7 +15,7 @@ end
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "opentable/win-2012r2-standard-amd64-nocm"
   config.vm.network "private_network", ip: "192.168.50.4"
-  config.vm.network :forwarded_port, guest: 3389, host: 3389
+  config.vm.network :forwarded_port, guest: 3333, host: 3333
 
   config.vm.provision :shell, path: "scripts/install-dot-net.ps1"
   config.vm.provision :shell, path: "scripts/install-sql-server.cmd"
